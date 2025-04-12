@@ -40,6 +40,9 @@ A to je konec našeho příběhu...
 
 ### Cvičení
 
-::exc[excs/platy-akademiku]
 ::exc[excs/skoly]
+
+#### Bonusy
+
 ::exc[excs/hodnoceni-hotelu]
+::exc[excs/platy-akademiku]
