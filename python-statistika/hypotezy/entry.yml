@@ -3,7 +3,6 @@ lead: Vysvětlíme, jakým způsobem funguje testování hypotéz.
 sections:
   - formulace
   - test
-  - excs
   - chyby
   - kvantily-hustota
   - test-normality

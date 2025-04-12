@@ -86,3 +86,7 @@ V našem případě tedy platí, že p-hodnota je přibližně 1 %. Pravděpodob
 Ada se rozhodla, že zkusí výsledky prezentovat pomocí grafů. My jí s tím pomůžeme. Ale nejprve nás čeká cvučení.
 
 ::fig[]{src=assets/ada_08.png}
+
+## Cvičení
+
+::exc[excs/spanek]

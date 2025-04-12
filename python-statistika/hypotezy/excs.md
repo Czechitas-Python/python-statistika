@@ -1,3 +1,0 @@
-## Cvičení
-
-::exc[excs/spanek]
