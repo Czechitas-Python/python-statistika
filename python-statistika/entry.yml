@@ -3,6 +3,5 @@ lead: Vysvětlíme si základy statistiky a ukážeme si, jak vše spočítat a 
 lessons:
   - instalace
   - hypotezy
-  - excs
-  - kvantily-hustota
+  - korelace-regrese
   

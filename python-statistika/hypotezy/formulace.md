@@ -2,7 +2,6 @@
 
 Uvažujme příklad království, kde vládne královna Ada.
 
-
 ::fig[]{src=assets/ada_01.png}
 
 Jednou za ní přijde obchodník s tím, že má zázračný přípravek, který zlepšuje paměť a soustředění. Ada si není jistá, že přípravek zkustečně funguje, a tak bude chtít ověřit jeho kvalitu pomocí experimentu. Experiment pak vyhodnotí a rozhodne, jestli přípravek pomáhá.
