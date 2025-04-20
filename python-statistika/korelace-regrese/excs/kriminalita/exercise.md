@@ -13,5 +13,3 @@ Podívej se na korelační matici. Kde je korelace nejvyšší a kde se naopak b
 Proveď statistický test hypotéz o korelaci mezi nezaměstnaností a kriminalitou. Zobraz si data pomocí bodového grafu. Sestav hypotézy, proveď test (využij Kenlallovou Tau) a interpretuj výsledky.
 
 Dále proveď test hypotéz o korelaci mezi nezaměstnaností a průměrnou velikostí domácnosti. Zobraz si data pomocí bodového grafu. Sestav hypotézy, proveď test (využij Kenlallovou Tau) a interpretuj výsledky.
-
-

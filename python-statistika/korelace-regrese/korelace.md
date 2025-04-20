@@ -32,8 +32,6 @@ Pozn.: Pozor na to, že v řadě případů je závislost lineární pouze v ně
 ```python
 sns.scatterplot(data=data, x="rainfall", y="avocado_yield")
 ```
-
-![png](statistika-2_files/statistika-2_3_1.png)
     
 Takové závislosti říkáme :term{cs="korelace" en="correlation"} a to, jak je závislost silná, můžeme popsat pomocí :term{cs="korelačního koeficientu" en="correlation coefficient"}. Pro jeho hodnoty platí následující:
 
@@ -80,3 +78,7 @@ Pro Kendallovo Tau předpoklad normality dat nepotřebujeme.
 ```python
 stat, pval = stats.kendalltau(data["rainfall"], data["avocado_yield"])
 ```
+
+### Cvičení
+
+::exc[excs/kriminalita]
