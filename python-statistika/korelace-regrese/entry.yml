@@ -1,0 +1,7 @@
+title: Korelace a regrese
+lead: Regrese a korelace nám mohou vysvětlit, jak se statistické proměnné vzájemně ovlivňují
+sections:
+  - korelace
+  - vypocet-korelace
+  - regrese
+  - robustni-regrese
