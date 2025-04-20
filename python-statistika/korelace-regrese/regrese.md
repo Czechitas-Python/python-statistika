@@ -6,14 +6,11 @@ Samotná informace o tom, že existuje statisticky významný vztah mezi množst
 
 Musíme si uvědomit, že výslednou úrodu ovlivňují i další vlivy - například kvalita půdy, množství slunečního svitu, péče farmářů atd. Z toho důvodu neleží všechny body na regresní křivce, ale pohybují se kolem ní.
 
-
 ```python
 g = sns.regplot(data=data, x="rainfall", y="avocado_yield", line_kws={"color": "red"}, ci=None)
 ```
 
-    
 ![png](statistika-2_files/statistika-2_13_0.png)
-    
 
 
 Pomocí této funkce dokážeme predikovat, kolik jaká bude úroda avokád podle množství srážek, a můžeme tedy předem plánovat dovoz nebo naopak plánovat vývoz.
@@ -27,7 +24,6 @@ Tato funkce je označovaná jako "lineární" a k jejímu vykreslení potřebuje
 
 K zobrazení těchto hodnot můžeme použít modul *statmodels*. Ten zobrazí velkou tabulku se spoustou čísel, nás však budou zajímat pouze některá.
 
-
 ```python
 res = smf.ols(formula="avocado_yield  ~ rainfall", data=data).fit()
 res.summary()
@@ -40,7 +36,6 @@ Podívejme se nejprve na dvě čísla (koeficienty - *coefficients*), která pot
 
 Pokud bychom chtěli odhadnout úrodu avokád na základě množství srážek, můžeme použít metodu `predict()`.
 
-
 ```python
 new_data = pd.DataFrame({"rainfall": [100]})
 predicted_yield = res.predict(new_data)
@@ -52,12 +47,13 @@ Regresní model nevysvětlí data dokonale. Jak jsme si již řekli, na vysvětl
 
 Model se v matematických vzorcích často značí $R^2$, v naší tabulce je označen jako `R-squared`.
 
+Chování regrese si můžeš vyzkoušet například [v této aplikaci](https://observablehq.com/@yizhe-ang/interactive-visualization-of-linear-regression).
+
 ### Přidání dalších proměnných
 
 Zkusme nyní do modelu přidat další proměnné. Proměnné přidáme napravo od symbolu `~`.
 
 Do regresního modelu můžeme přidat i tzv. kategoriální (`str`) proměnné. Ty musíme označit pomocí funkce `C()`.
-
 
 ```python
 data = pd.read_csv("avocado_farming_data.csv")
@@ -80,23 +76,10 @@ Test má následující hypotézy:
 
 Pokud je p-hodnota testu méně než 0.05, můžeme tedy koeficient označit jako statisticky významný. p-hodnotu testu najdeme ve sloupci `P>|t|`. p-hodnotu máme pro každý koeficient zvlášť. V našem případě platí, že koeficient `Intercept` je statisticky nevýznamný a všechny ostatní koeficienty jsou statisticky významné.
 
-# Cvičení
+### Cvičení
 
-## Kvalita betonu
+::exc[excs/kvalita-betonu]
 
-V souboru [Concrete_Data_Yeh.csv](Concrete_Data_Yeh.csv) najdeš informace o kvalitě betonu. Sloupce 1-7 udávají množství jednotlivých složek v kg, které byly přimíchány do krychlového metru betonu (např. cement, voda, kamenivo, písek atd.). Ve sloupci 8 je stáří betonu a ve sloupci 9 kompresní síla betonu v megapascalech. Vytvoř regresní model, který bude predikovat kompresní sílu betonu na základě všech množství jednotlivých složek a jeho stáří. Zhodnoť kvalitu modelu.
+#### Bonusy
 
-### Bonus
-
-K vyřešení tohoto bonusu je potřeba pročíst si část *Bonus: Test hypotézy o statistické významnosti koeficientu*.
-
-Která ze složek betonu ovlivňuje sílu betonu negativně (tj. má záporný regresní koeficient)?
-
-Video s řešením příkladu je [zde](https://youtu.be/iGXlEpf0yb4). Kód je [zde](statistika-2-assets/reseni.ipynb).
-
-## Bonus: Pojišťovna
-
-V souboru [expenses.csv](expenses.csv) najdeš informace o platbách za pojištěnce jedné pojišťovny: věk, pohlaví, BMI (index počítaný jako hmotnost dělená výškou), počet dětí, kuřák/nekuřák, region a platby za pojištěnce. 
-
-Vytvoř regresní model, který odhadne platby za pojištěnce na základě jeho věku, indexu BMI, pohlaví a tom, zda jde o kuřáka (kuřačku).
-
+::exc[excs/pojistovna]
