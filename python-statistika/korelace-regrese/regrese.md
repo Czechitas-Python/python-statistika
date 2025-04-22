@@ -10,9 +10,6 @@ Musíme si uvědomit, že výslednou úrodu ovlivňují i další vlivy - např�
 g = sns.regplot(data=data, x="rainfall", y="avocado_yield", line_kws={"color": "red"}, ci=None)
 ```
 
-![png](statistika-2_files/statistika-2_13_0.png)
-
-
 Pomocí této funkce dokážeme predikovat, kolik jaká bude úroda avokád podle množství srážek, a můžeme tedy předem plánovat dovoz nebo naopak plánovat vývoz.
 
 ::fig[]{src=assets/ada_10.png}
