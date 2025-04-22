@@ -12,7 +12,7 @@ Výpočet se provádí podle vzorce:
 
 Vzorec ověřuje, jestli s rostoucím počtem hodin studia roste počet získaných bodů. Protože vidíme, že počet získaných bodů postupně roste, je koeficient vysoký. Do hry ale vstupuje i náhoda, např. někdo měl větší štěstí na otázky atd.
 
-Příklad s vlastním datasetem (8 hodnot):
+Níže máme jednoduchý příklad vstupních dat.
 
 | Hodiny studia | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 |---------------|---|---|---|---|---|---|---|---|
@@ -50,13 +50,7 @@ kde:
 - *D* je počet diskordantních párů,
 - *n* je počet pozorování.
 
-Příklad s vlastním datasetem (8 hodnot):
-
-| Hodiny studia | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-|---------------|---|---|---|---|---|---|---|---|
-| Skóre testu   | 0.87 | 7.47 | 4.23 | 6.54 | 11.56 | 14.52 | 12.63 | 21.53 |
-
-- Po výpočtu Kendallova Tau získáme 0.79. To ukazuje silnou pozitivní monotónní závislost mezi počtem hodin studia a skóre testu.
+Uvažujme stejná data jako u Pearsonova koeficientu. Po výpočtu Kendallova Tau získáme 0.79. To ukazuje silnou pozitivní závislost mezi počtem hodin studia a skóre testu.
 
 #### Příklad vyhodnocení dvou párů
 
