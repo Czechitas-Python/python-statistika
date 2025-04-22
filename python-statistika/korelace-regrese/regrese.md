@@ -7,6 +7,17 @@ Samotná informace o tom, že existuje statisticky významný vztah mezi množst
 Musíme si uvědomit, že výslednou úrodu ovlivňují i další vlivy - například kvalita půdy, množství slunečního svitu, péče farmářů atd. Z toho důvodu neleží všechny body na regresní křivce, ale pohybují se kolem ní.
 
 ```python
+import pandas as pd
+import seaborn as sns
+from scipy import stats
+import numpy as np
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+import statsmodels.tools as tools
+import matplotlib.pyplot as plt
+
+
+data = pd.read_csv("avocado_farming_data.csv")
 g = sns.regplot(data=data, x="rainfall", y="avocado_yield", line_kws={"color": "red"}, ci=None)
 ```
 
@@ -26,17 +37,23 @@ res = smf.ols(formula="avocado_yield  ~ rainfall", data=data).fit()
 res.summary()
 ```
 
+Výsledkem je obří tabulka, ze které nás ale bude zajímat jenom část hodnot.
+
+::fig[]{src=assets/regression_summary.png}
+
 Podívejme se nejprve na dvě čísla (koeficienty - *coefficients*), která potřebujeme k nakreslení naší funkce:
 
-- V řádku `intercept` máme hodnotu, která určuje, kde funkce protne se svislou osou.
-- V řádku `rainfall` máme hodnotu, která udává sklon funkce.
+- V řádku `intercept` máme hodnotu, která určuje, kde funkce protne se svislou osou. Pro náš případ to znamená, jakou úrodu by model odhadl pro teoretickou situaci, kdy by byla 0 srážek.
+- V řádku `rainfall` máme hodnotu, která udává sklon funkce. V našem případě udává, o kolik be se v průměru zvýšila úroda, pokud by spadlo o 1 mm více srážek. Jinak řečeno vyšší číslo zde máme, tím více avokád nám "zařídí" 1 mm srážek navíc.
 
 Pokud bychom chtěli odhadnout úrodu avokád na základě množství srážek, můžeme použít metodu `predict()`.
 
 ```python
-new_data = pd.DataFrame({"rainfall": [100]})
+new_data = pd.DataFrame({"rainfall": [500]})
 predicted_yield = res.predict(new_data)
 ```
+
+Metoda `predict` provede výpočet `500 * 0.2432 + 92.0281` a zobrazí nám výsledek.
 
 ### Vyhodnocení kvality modelu
 
@@ -60,18 +77,13 @@ res.summary()
 
 U množství škůdců (sloupec `pests`) vidíme zápornýkoeficient. To znamená, že čím vyšší hodnota je v tomto sloupci, tím nižší je výsledná úroda.
 
+#### Jak statsmodels v modelu zachází s proměnnou regions
+
+Protože `regions` je textové označení oblasti, jedná se o tzv. *kategoriální* proměnnou. `statsmodels` takovou proměnnou nemůže použít přímo. Funkce `C(regions)` proto spustí tzv. *one‑hot encoding* – pro každou oblast založí samostatný binární sloupec (tj. sloupec, který obsahuje pouze hodnoty 0 a 1). Máme tři regiony, vzniknou tedy proměnné `C(regions)[T.South]` a `C(regions)[T.West]`. Jeden z regionů (konkrétně `North`) vynechá. Model každému regionu přiřadí pomocí kterého odhaduje, o kolik je v něm úroda větší v porovnání s vynechaným regionem, tj. regionem `North`. Protože jsou oba koeficienty kladné, znamená to, že v obou z nich je úrada větší než v regionu `North`. 
+
+Díky one‑hot encodingu tedy dokážeme do lineární regrese začlenit i textové údaje o původu sklizně.
+
 ::fig[]{src=assets/ada_11.png}
-
-### Bonus: Test hypotézy o statistické významnosti koeficientu
-
-S regresí souvisí řada testů statistických hypotéz. Jedním z nich je test statistické významnosti regresního koeficientu. Ten se hodí hlavně v případě, kdy máme koeficientů více a zajímá nás, které má smysl v modelu používat.
-
-Test má následující hypotézy:
-
-- H0: Koeficient je statisticky nevýznamný.
-- H1: Koeficient je statisticky významný.
-
-Pokud je p-hodnota testu méně než 0.05, můžeme tedy koeficient označit jako statisticky významný. p-hodnotu testu najdeme ve sloupci `P>|t|`. p-hodnotu máme pro každý koeficient zvlášť. V našem případě platí, že koeficient `Intercept` je statisticky nevýznamný a všechny ostatní koeficienty jsou statisticky významné.
 
 ### Cvičení
 
