@@ -21,10 +21,8 @@ Do království královny Ady mezitím přišel další obchodník, který tento
 import pandas as pd
 from scipy import stats
 
-# Načtení dat
 data = pd.read_csv("spanek.csv")
 
-# Provedení t-testu (jednostranný, alternativa greater)
 statistic, p_value = stats.ttest_ind(data['Pripravek'], data['Placebo'], alternative='greater', equal_var=False)
 
 print(f"P-hodnota: {p_value}")

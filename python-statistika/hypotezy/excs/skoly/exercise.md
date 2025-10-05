@@ -25,16 +25,8 @@ from scipy import stats
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Načtení dat
 data = pd.read_csv("skoly.csv")
 
-# Vizualizace dat pomocí boxplotu
-sns.boxplot(data=data)
-plt.ylabel('Počet bodů')
-plt.title('Porovnání výsledků testů škol A a B')
-plt.show()
-
-# T-test (oboustranný test)
 statistic, p_value = stats.ttest_ind(data['School A'], data['School B'], equal_var=False)
 
 print(f"P-hodnota: {p_value:.6f}")

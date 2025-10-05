@@ -46,7 +46,6 @@ ax = sns.histplot(data=data, x='value', hue='Position title', bins=30)
 ax.set(xlabel='Plat ($)', title='Porovnání platů profesorů a docentů')
 plt.show()
 
-# Test normality
 stat_prof, p_prof = stats.shapiro(data_prof)
 stat_asoc, p_asoc = stats.shapiro(data_asoc_prof)
 
