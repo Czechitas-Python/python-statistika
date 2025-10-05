@@ -75,10 +75,12 @@ Pokud si zvolíme hladinu významnosti jako 5 %, což je nejčastější volba, 
 ```python
 from scipy import stats
 
-statistic, p_value = stats.ttest_ind(data['Pripravek'], data['Placebo'], alternative='greater')
+statistic, p_value = stats.ttest_ind(data['Pripravek'], data['Placebo'], alternative='greater', equal_var=False)
 
 print(f"P-hodnota: {p_value}")
 ```
+
+Parametr `equal_var=False` říká funkci, aby použila Welchův t-test, který je robustnější variantou klasického t-testu. Welchův test je vhodný zejména když nemáme jistotu, že obě skupiny mají stejný rozptyl (různorodost), což je v praxi velmi častá situace.
 
 V našem případě tedy platí, že p-hodnota je méně než 1 %. Pravděpodobnost, že je tento výsledek náhoda, je tedy velmi malá a my jsme dospěli k tomu, že přípravek funguje.
 

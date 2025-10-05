@@ -11,13 +11,25 @@ Spusť Visual Studio Code a otevřete si nový terminál (z horní lišty vybert
 Pokud používáš Windows, napiš do terminálu následující příkaz a stiskni **Enter**:
 
 ```shell
-pip install pandas matplotlib seaborn statsmodels scipy jupyterlab ipykernel
+pip install pandas
+pip install matplotlib
+pip install seaborn
+pip install statsmodels
+pip install scipy
+pip install jupyterlab
+pip install ipykernel
 ```
 
 Pokud používáš MacOS nebo Linux, napiš následující příkaz:
 
 ```shell
-pip3 install pandas matplotlib seaborn statsmodels scipy jupyterlab ipykernel
+pip3 install pandas
+pip3 install matplotlib
+pip3 install seaborn
+pip3 install statsmodels
+pip3 install scipy
+pip3 install jupyterlab
+pip3 install ipykernel
 ```
 
 Instalaci můžeš ověřit tím, že si otevřeš nový program, vložíš do něj následující řádek a spustíš ho. Pokud program nevypíše nic, instalace proběhla korektně. Pokud vypíše nějakou chybu, instalace se pravděpodobně nezdařila.
