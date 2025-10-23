@@ -1,6 +1,6 @@
 ## Odlehlá pozorování
 
-V případě regrese často můžeme narazit na problémy, které souvisí s daty, které máme k dispozici. Uvažujme například dataset s extrémě úspěšnými farmami [avocado_farming_data_outlier.csv](avocado_farming_data_outlier.csv). 
+V případě regrese často můžeme narazit na problémy, které souvisí s daty, které máme k dispozici. Uvažujme například dataset s extrémě úspěšnými farmami [avocado_farming_data_outlier.csv](assets/avocado_farming_data_outlier.csv). 
 
 Odlehlá pozorování mohou mít mnoho příčin. Na některé farmě můžou být prostě farmáři pracovitější, takže mají větší úrodu.
 
