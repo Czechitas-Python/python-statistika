@@ -3,7 +3,7 @@ title: Rezervace hotelů
 demand: 2
 ---
 
-Vyzkoušej rozhodovací strom na datové sadě o rezervací hotelů ze serveru [Booking.com](https://booking.com) ([hotel_bookings.csv](hotel_bookings.csv)), kterou jsme používali na začátku kurzu. 
+Vyzkoušej rozhodovací strom na datové sadě o rezervací hotelů ze serveru [Booking.com](https://booking.com) ([hotel_bookings.csv](assets/hotel_bookings.csv)), kterou jsme používali na začátku kurzu. 
 
 Pokud pracuješ s rozhodovacím stromem, neprováděj u číselných hodnot standardizaci. Není totiž nutná, rozhodovací strom uvažuje vždy v každém rozhodovacím uzlu pouze jednou proměnnou, tím pádem ho nikdy nemůže splést 
 

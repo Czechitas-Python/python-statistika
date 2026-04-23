@@ -41,7 +41,7 @@ warnings.filterwarnings("ignore")
 
 V této lekci budeme používat jeden z legendárních datasetů ve světě Data Science - [dataset o kostatcích z roku 1936](https://en.wikipedia.org/wiki/Iris_flower_data_set). Datovou sadu s daty o kosetcích (Iris) představil britský statistik a biolog Ronald Fisher ve svém článku z roku 1936 o využití mnohonásobných měření v taxonomických problémech. Někdy se mu říká Andersonův kosatcový datový soubor, protože Edgar Anderson shromáždil data k měření morfologické variace květin kosatce tří souvisejících druhů. Datová sada obsahuje 50 vzorků od každého ze tří druhů kosatce (Iris Setosa, Iris virginica a Iris versicolor). Od každého vzorku byly změřeny čtyři vlastnosti: délka a šířka kališních lístků a korunních lístků, v centimetrech.
 
-Data jsou ke stažení [zde](IRIS.csv)
+Data jsou ke stažení [zde](assets/IRIS.csv)
 
 ::fig[]{src=assets/iris-machinelearning.png}
 
@@ -129,7 +129,7 @@ Druhým z přístupů je převed úlohy s více třídami na problém dvou tří
 - Prvním z nich je varianta "jeden proti všem" (**One-to-Rest**). Při jeho použití algoritmus vytvoří tolik klasifikátorů, kolik máme tříd, a trénuje každý jako **binární klasifikaci jedné třidy oproti všem ostatním**. Při predikci každý z klasifikátorů předpoví buď "svojí" třídu, nebo "ostatní třídy". Pokud bychom například rozdělovali data do tří skupin, vytvoří tento postup tři klasifikátory.
 - Druhou z možností je "jeden proti jednomu" (**One-to-One**). Při jeho použití algoritmus vytvoří klasifikátor pro každou dvojici tříd. Každý klasifikátor porovnává dvě třídy a data z ostatních tříd jsou ignorována.
 
-Data najdete [zde](Dry_Bean_Dataset.csv)
+Data najdete [zde](assets/Dry_Bean_Dataset.csv)
 
 Zdroj dat: https://data.world/makeovermonday/2021w14
 

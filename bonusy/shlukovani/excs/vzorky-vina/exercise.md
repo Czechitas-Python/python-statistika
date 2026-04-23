@@ -5,7 +5,7 @@ demand: 2
 
 ### Vzorky vína
 
-Pracuj se souborem [wine-regions.csv](wine-regions.csv). Každý záznam obsahuje informace o vzorku vína. Všechny vzorky pocházejí z jednoho regionu v Itálii, ale v datech se nachází několik různých odrůd. Naší úlohou bude data uspořádat do shluků, které by mohly odpovídat odrůdám. Na začátku uvažujme, že nevíme, ke které odrůdě jednotlivé záznamy patří, a nevíme ani to, kolik odrůd v datech je.
+Pracuj se souborem [wine-regions.csv](assets/wine-regions.csv). Každý záznam obsahuje informace o vzorku vína. Všechny vzorky pocházejí z jednoho regionu v Itálii, ale v datech se nachází několik různých odrůd. Naší úlohou bude data uspořádat do shluků, které by mohly odpovídat odrůdám. Na začátku uvažujme, že nevíme, ke které odrůdě jednotlivé záznamy patří, a nevíme ani to, kolik odrůd v datech je.
 
 - Proveď redukci dimenzionality na 2 dimenze. Vykresli data pomocí grafu. Poznáš z grafu, kolik by byl nejlepší počet shluků? Následně zkus určit metriku *inertia* pro 2 až 10 shluků. Pro jaký počet shluků dochází k výraznému sníže tempa jejího poklesu? Následně pro tento počet vykresli graf včetně centroidů.
 - Redokce dimenzionality není nutná. Zkus nyní znovu načíst data a vykresli graf metriky *inertia* pro 1 až 10 shluků na datech s původní dimenzí. Změnil se graf nějak výrazně? Změnilo by to tvé rozhodnutí o počtu shluků?

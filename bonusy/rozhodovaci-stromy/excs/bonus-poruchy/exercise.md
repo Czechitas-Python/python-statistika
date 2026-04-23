@@ -3,7 +3,7 @@ title: Bonus – Poruchy
 demand: 3
 ---
 
-Vrať se k datům o poruchách ze souboru [predictive_maintenance.csv](predictive_maintenance.csv) a pokus se pomocí rozhodovacího stromu klasifikovat stavy stroje.
+Vrať se k datům o poruchách ze souboru [predictive_maintenance.csv](assets/predictive_maintenance.csv) a pokus se pomocí rozhodovacího stromu klasifikovat stavy stroje.
 
 Použij sloupce Type, Air temperature [K], Process temperature [K], Rotational speed [rpm], Torque [Nm], Tool wear [min] jako vstupní proměnné a Failure Type jako výstupní proměnnou. Sloupec `Type` obsahuje kategoriální hodnoty, použij teddy `OneHotEncoder`.
 

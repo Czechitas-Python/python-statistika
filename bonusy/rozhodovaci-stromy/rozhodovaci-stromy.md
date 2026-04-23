@@ -36,7 +36,7 @@ import os
 os.environ["PATH"] += os.pathsep + r'C:\Program Files\Graphviz\bin'
 ```
 
-Budeme pracovat s daty v souboru [mushrooms.csv](mushrooms.csv), která obsahují data o houbách. Náš model bude predikovat, jestli je houba jedlá nebo jedovatá.
+Budeme pracovat s daty v souboru [mushrooms.csv](assets/mushrooms.csv), která obsahují data o houbách. Náš model bude predikovat, jestli je houba jedlá nebo jedovatá.
 
 ```python
 data = pandas.read_csv("mushrooms.csv")

@@ -106,7 +106,7 @@ warnings.filterwarnings("ignore")
 
 V našem kurzu budeme pracovat s modulem [`scikit-learn`](https://scikit-learn.org/stable/). Tento modul je velice často využíván v takzvaném klasickém strojovém učení (tj. strojové učení, které _nevyužívá_ hlubokých neuronových sítí). Používá se jak pro výuku (má k dispozici [velké množství tutoriálů a příkladů](https://scikit-learn.org/stable/auto_examples/index.html)), tak pro praktické využití v akademickém nebo soukromém sektoru.
 
-Data si můžeš stáhnout [zde](wine.csv).
+Data si můžeš stáhnout [zde](assets/wine.csv).
 
 Zdroj dat: [https://archive.ics.uci.edu/ml/datasets/wine+quality](https://archive.ics.uci.edu/ml/datasets/wine+quality)
 
@@ -380,6 +380,6 @@ accuracy_score(y_test, y_pred)
 - [Step by Step Diabetes Classification-KNN-detailed](https://www.kaggle.com/code/shrutimechlearn/step-by-step-diabetes-classification-knn-detailed)
 - [Support Vector Classifiers (SVCs): A Comprehensive Guide](https://medium.com/ai-in-plain-english/support-vector-classifiers-svcs-a-comprehensive-guide-a9115a99a94f) (z placeného TowardsDataScience)
 
-#::exc[excs/nba]
+::exc[excs/nba]
 
 ::exc[excs/bonus-vino]

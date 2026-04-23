@@ -3,7 +3,7 @@ title: NBA
 demand: 2
 ---
 
-Stáhni si dataset [nba_logreg.csv](nba_logreg.csv), který obsahuje informace o začínajících hráčích americké basketbalové ligy NBA. Jako vstupní proměnnou pro předpověď použij sloupec `TARGET_5Yrs`, který o daném hráči říká, zda byl aktivní v lize i po pěti letech.
+Stáhni si dataset [nba_logreg.csv](assets/nba_logreg.csv), který obsahuje informace o začínajících hráčích americké basketbalové ligy NBA. Jako vstupní proměnnou pro předpověď použij sloupec `TARGET_5Yrs`, který o daném hráči říká, zda byl aktivní v lize i po pěti letech.
 
 - Načti si data do proměnných `X` a `y`
 - Rozděl data na trénovací a testovací (velikost testovacích dat nastav na 30% a nezapomeň nastavit proměnnou `random_state`, aby tvoje výsledky byly reprodukovatelné)

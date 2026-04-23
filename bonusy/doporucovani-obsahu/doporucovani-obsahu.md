@@ -22,7 +22,7 @@ Data mohou být založená na tzv. explicitním nebo implicitním feedbacku (*ex
 
 #### Filtrování na základě obsahu
 
-V této části si vyzkoušíme filtrování na základě popisu. Využijeme dataset s 5000 filmy ze serveru [imdb.com](https://imdb.com). Pozor, jedná se o jiný dataset, než jaký jsme používali v minulé lekci. Dataset je uložený v souboru [tmdb_5000_movies.csv](tmdb_5000_movies.csv). Budeme využívat sloupec `overview`, kde jsou uložené slovní popisy filmů. Filmy, které nemají slovní popis, z dat vyřadíme.
+V této části si vyzkoušíme filtrování na základě popisu. Využijeme dataset s 5000 filmy ze serveru [imdb.com](https://imdb.com). Pozor, jedná se o jiný dataset, než jaký jsme používali v minulé lekci. Dataset je uložený v souboru [tmdb_5000_movies.csv](assets/tmdb_5000_movies.csv). Budeme využívat sloupec `overview`, kde jsou uložené slovní popisy filmů. Filmy, které nemají slovní popis, z dat vyřadíme.
 
 ```python
 import pandas as pd
@@ -179,7 +179,7 @@ user_recommendation.sort_values(by="score", ascending=False).head()
 
 #### Kolaborativní filtrování
 
-U kolaborativního filtrování se řídíme preferencemi jednotlivých uživatelů a uživatelek. Využijeme data ze seouboru [user_ratings.csv](user_ratings.csv), který obsahuje uživatelská hodnocení fimů. U hodnocení víme ID uživatele (`userId`), bodové hodnocení filmu (sloupec `rating`) a název filmu (sloupec `title`).
+U kolaborativního filtrování se řídíme preferencemi jednotlivých uživatelů a uživatelek. Využijeme data ze seouboru [user_ratings.csv](assets/user_ratings.csv), který obsahuje uživatelská hodnocení fimů. U hodnocení víme ID uživatele (`userId`), bodové hodnocení filmu (sloupec `rating`) a název filmu (sloupec `title`).
 
 ```python
 data_ratings = pd.read_csv("user_ratings.csv")
