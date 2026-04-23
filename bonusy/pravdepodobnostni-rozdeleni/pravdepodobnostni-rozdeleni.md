@@ -134,7 +134,7 @@ plt.plot(bins, expon.pdf(bins, scale=scale), linewidth=1, color='r')
 
 Existují i statistická rozdělení, která modelují celočíselné statistické veličiny. Například uvažujme, že hodíme
 desetkrát mincí a zajímá nás, kolikrát může padnout líc. To můžeme zjistit pomocí binomického rozdělení. Pomocí
-něj modelujeme situaci, že provedeme $n$ pokusů a úspěch v pokusu (v našem případě padnutí líce) je roven $p$.
+něj modelujeme situaci, že provedeme ![](assets/formula-inline-4ed0a7331160.png) pokusů a úspěch v pokusu (v našem případě padnutí líce) je roven ![](assets/formula-inline-bbf1790f1daa.png).
 
 ```python
 from scipy.stats import binom
@@ -150,9 +150,9 @@ plt.hist(data, bins=range(0, n+2), density=True)
 
 Pro celočíselná (diskrétní) rozdělení nekreslíme funkci hustoty, ale používáme tzv. pravděpodobnostní funkci,
 která je nespojitá. Parametrem této funkce u binomického rozdělení je pravděpodobnost úspěchu jednoho pokusu a
-značíme ho jako $p$.
+značíme ho jako ![](assets/formula-inline-bbf1790f1daa.png).
 
-Pro binomické rozdělení platí, že je symetrické pro $p = 0.5$ a nesymetrické pro ostatní hodnoty.
+Pro binomické rozdělení platí, že je symetrické pro ![](assets/formula-inline-902b4113accf.png) a nesymetrické pro ostatní hodnoty.
 
 Například uvažujme písemnou zkoušku, která má 20 otázek a každá otázka má 4 možné odpovědi,
 z nichž je právě 1 správná. Pomocí binomického rozdělení můžeme snadno spočítat, jaká je pravděpodobnost,

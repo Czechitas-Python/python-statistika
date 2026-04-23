@@ -3,3 +3,28 @@ lead: Pravděpodobnostní rozdělení náhodných veličin a testování hypoté
 sections:
   - pravdepodobnostni-rozdeleni
   - testovani-hypotez
+  - z-test
+  - z-test-excel
+  - z-test-excel-funkce
+  - z-test-levostranny
+  - z-test-pravostranny
+  - t-test
+  - t-test-levostranny
+  - t-test-pravostranny
+  - z-t-test-porovnani
+  - chi-kvadrat-test-rozptyl
+  - chi-kvadrat-test-rozptyl-levostranny
+  - chyby-pri-testovani
+  - jak-vznikaji-chyby
+  - vyber-dvouvyberoveho-testu
+  - t-test-parovy
+  - t-test-parovy-pravostranny
+  - t-test-parovy-oboustranny
+  - t-test-dvouvyberovy
+  - t-test-dvouvyberovy-pravostranny
+  - t-test-dvouvyberovy-oboustranny
+  - welchuv-test-dvouvyberovy
+  - welchuv-test-pravostranny
+  - welchuv-test-oboustranny
+  - rozptyl
+  - rozptyl-podruhe
