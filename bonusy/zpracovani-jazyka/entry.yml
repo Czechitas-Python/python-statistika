@@ -1,0 +1,5 @@
+title: Zpracování přirozeného jazyka
+lead: Základy NLP – reprezentace textu pomocí CountVectorizer a TF-IDF, klasifikace dokumentů a analýza sentimentu
+sections:
+  - zpracovani-jazyka
+  - tf-idf

@@ -1,0 +1,5 @@
+title: Pravděpodobnostní rozdělení
+lead: Pravděpodobnostní rozdělení náhodných veličin a testování hypotéz pomocí modulu scipy
+sections:
+  - pravdepodobnostni-rozdeleni
+  - testovani-hypotez
